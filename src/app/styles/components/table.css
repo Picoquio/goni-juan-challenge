@@ -1,0 +1,9 @@
+.p-datatable-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.p-datatable-paginator-bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

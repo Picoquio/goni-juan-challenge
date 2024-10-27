@@ -1,0 +1,14 @@
+.dottedBackground {
+  /* display: flex;
+  justify-content: center; */
+  inset: 0;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 16px 16px;
+  /* @apply flex justify-center inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px, transparent_1px)] [background-size:16px_16px] */
+}
+
+

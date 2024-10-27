@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "./app/styles/utility/backgrounds.css";
+@import "./app/styles/components/card.css";
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+html,
+body {
+  margin: 0 !important;
+  height: 100%;
+  /* font-family: Arial, Helvetica, sans-serif */
+}
+
+* {
+  font-family: "Montserrat"
+}
+
+
+*:focus {
+  box-shadow: none !important;
+}

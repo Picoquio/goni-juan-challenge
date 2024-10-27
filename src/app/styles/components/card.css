@@ -1,3 +1,9 @@
-.customCard {
-  @apply rounded-lg shadow-2xl bg-slate-50 p-8
-}
+ .customCard {
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   border-radius: 10px;
+   background-color: rgb(248 250 252);
+   padding: 2rem;
+
+
+   /* @apply rounded-lg shadow-2xl bg-slate-50 p-8 */
+ }

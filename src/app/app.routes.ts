@@ -1,7 +1,10 @@
 import { Routes } from '@angular/router';
+import { isAuthenticatedGuard } from './auth/guards/is-authenticated.guard';
+import { isNotAuthenticatedGuard } from './auth/guards/is-not-authenticated.guard';
 
 export const routes: Routes = [
   {
+    canActivate: [isNotAuthenticatedGuard],
     path: 'login',
     loadComponent: () => import('./auth/login.component'),
     title: 'Login'
@@ -10,6 +13,8 @@ export const routes: Routes = [
     path: '',
     loadComponent: () => import('./layout/layout.component'),
     title: 'Home Page',
+    canActivate: [isAuthenticatedGuard],
+    // canMatch: [CanMatchGuard],
     children: [
       {
         path: `users`,

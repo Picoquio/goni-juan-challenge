@@ -7,6 +7,12 @@ import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
 // import { NavigationRoutes } from '../../../shared/enums';
 
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { AuthService } from '../../auth/auth.service';
+
+
 @Component({
   selector: 'app-menu-bar',
   standalone: true,
@@ -14,24 +20,25 @@ import { Router } from '@angular/router';
     CommonModule,
     // FontAwesomeModule,
     RippleModule,
-    ButtonModule
+    ButtonModule,
+    AvatarModule,
+    AvatarGroupModule,
+    OverlayPanelModule
   ],
   templateUrl: './menu-bar.component.html',
   // styleUrl: './menu-bar.component.css',
 })
 export class MenuBarComponent {
 
-  // faUser = faUser;
-  // faCapsules = faCapsules;
-  // faTrash = faTrash;
+  private readonly authService = inject(AuthService);
+  private readonly router = inject(Router);
+  onLogout(): void {
+    this.authService.logout();
+    this.router.navigateByUrl('/login')
+  }
 
-  private router = inject(Router);
 
-  // navigateToPacientes(): void {
-  //   console.log('clickeado');
 
-  //   this.router.navigateByUrl(`/${NavigationRoutes.PACIENTES}`)
-  // }
 
 
 }

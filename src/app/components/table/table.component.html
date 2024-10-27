@@ -1,7 +1,8 @@
-<p-table stripedRows [columns]="tableColumns()" [value]="dataSource()">
+<p-table  responsiveLayout="stack"  [breakpoint]="'960px'" [paginator]="true" [rows]="8"  [columns]="tableColumns()"
+  [value]="dataSource()">
   <ng-template pTemplate="caption">
     <div class="flex  justify-between">
-      <h1 class="text-2xl">{{tableTitle()}}</h1>
+      <span class="text-2xl">{{tableTitle()}}</span>
     </div>
   </ng-template>
 
@@ -17,14 +18,15 @@
   <ng-template pTemplate="body" let-rowData let-columns="columns">
     <tr>
       <td *ngFor="let col of columns">
+        <span class="p-column-title"> {{ col.header }}</span>
         {{ rowData[col.field] }}
       </td>
       <td>
         <p-button size="small" icon="pi pi-pencil" [rounded]="true" pTooltip="Editar" tooltipPosition="top"
-          severity="info" [raised]="true" styleClass="mr-2 w-9 h-9">
+          severity="info" [raised]="true" styleClass="mr-2">
         </p-button>
         <p-button icon="pi pi-file" [rounded]="true" pTooltip="Historia clínica" tooltipPosition="top"
-          severity="primary" [raised]="true" styleClass="mr-2 w-9 h-9">
+          severity="primary" [raised]="true">
         </p-button>
       </td>
     </tr>

@@ -1,24 +1,24 @@
 <div class="dottedBackground flex justify-content-center align-items-center">
   <div class="customCard w-full m-4 sm:m-0 sm:w-9 lg:w-6 xl:w-4 h-fit">
-    <h1 class=" text-center text-xl  font-semibold">Bienvenido/a</h1>
+    <h1 class=" text-center text-xl  font-semibold">Welcome!</h1>
 
     <form [formGroup]="form" (ngSubmit)="onLogin()">
       <div class="flex flex-column gap-6">
         <div class="flex flex-column gap-2">
-          <label for="username">Email</label>
+          <label for="username">Username</label>
           <input formControlName="username" id="username" type="text" pInputText />
           <small *ngIf="formValidationService.isNotValidField(form, 'username')" class="text-red-500">
             {{formValidationService.getFieldError(form, 'username')}}
           </small>
         </div>
         <div class="flex flex-column gap-2">
-          <label for="password">Contraseña</label>
+          <label for="password">Password</label>
           <input formControlName="password" id="password" type="text" pInputText />
           <small *ngIf="formValidationService.isNotValidField(form, 'password')" class="text-red-500">
             {{formValidationService.getFieldError(form, 'password')}}
           </small>
         </div>
-        <p-button type="submit" label="Ingresar" styleClass="w-full" />
+        <p-button type="submit" label="Log in" styleClass="w-full" />
       </div>
     </form>
 

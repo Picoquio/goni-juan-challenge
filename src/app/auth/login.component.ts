@@ -7,6 +7,7 @@ import { AuthService } from "./auth.service";
 import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
 import { FormValidationService } from "../common/services/formValidation.service";
 import { Router } from "@angular/router";
+import { ToastService } from "../common/services/toast.service";
 
 @Component({
   standalone: true,
@@ -23,7 +24,8 @@ export default class LoginComponent {
   formValidationService = inject(FormValidationService);
   private fb = inject(FormBuilder);
   private readonly authService = inject(AuthService);
-  private router = inject(Router);
+  private readonly router = inject(Router);
+  private readonly toastService = inject(ToastService);
 
   public form = this.fb.group({
     username: new FormControl<string | null>(null, [Validators.required, Validators.minLength(4), Validators.maxLength(120)]),
@@ -40,6 +42,7 @@ export default class LoginComponent {
 
       this.router.navigateByUrl('/users');
     } else {
+      this.toastService.setToast({ severity: 'error', summary: 'Error', detail: 'Usuario o contraseña incorrectos' })
 
     }
   }

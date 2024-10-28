@@ -23,19 +23,17 @@ export class FormValidationService {
     for (const key of Object.keys(errors)) {
       switch (key) {
         case 'max':
-          return `Valor máximo (${errors['max'].max}) excedido`;
+          return `Max. value (${errors['max'].max}) exceeded.`;
         case 'min':
-          return `Valor mínimo (${errors['max'].min}) no alcanzado`;
+          return `Min. value (${errors['max'].min}) not provided.`;
         case 'required':
-          return 'El campo es requerido';
-        case 'requiredTrue':
-          return 'El campo debe tener un valor verdadero';
+          return 'Field is required';
         case 'email':
-          return 'Email inválido';
+          return 'Invalid email';
         case 'minlength':
-          return `Largo mínimo (${errors['minlength'].requiredLength}) no alcanzado`;
+          return `Min. length is (${errors['minlength'].requiredLength}).`;
         case 'maxlength':
-          return `Largo máximo (${errors['maxlength'].requiredLength}) excedido. Largo actual: ${errors['maxlength'].actualLength}`;
+          return `Max. length is (${errors['maxlength'].requiredLength}).`;
         case 'pattern':
           return `Valor no permitido`;
       }

@@ -1,12 +1,19 @@
 export interface UsersResponse {
-  id: number;
+  id?: number;
   name: string;
   username: string;
   email: string;
-  address: Address;
+  address?: Address | null;
   phone: string;
-  website: string;
-  company: Company;
+  website?: string | null;
+  company?: Company | null;
+}
+
+export interface IAddeditUser {
+  name: string | null | undefined;
+  username: string | null | undefined;
+  email: string | null | undefined;
+  phone: string | null | undefined;
 }
 
 export interface Address {

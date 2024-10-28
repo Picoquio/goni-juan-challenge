@@ -7,6 +7,7 @@ import { routes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { provideHttpClient } from '@angular/common/http';
 import { MessageService } from 'primeng/api';
+import { userReducer } from './store/user.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), provideStore(),
     importProvidersFrom(BrowserAnimationsModule),
     provideHttpClient(),
-    MessageService
+    MessageService,
+    provideStore({ user: userReducer }),
   ]
 };

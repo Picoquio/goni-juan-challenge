@@ -7,7 +7,7 @@
 ### Características principales
 La aplicación:
 - Simula autenticación: es decir que verifica *quién* soy.
-- Maneja autorizaciones: luego de identificar al usuario, verifica `qué permisos` tiene.
+- Maneja autorizaciones: luego de identificar al usuario, verifica *qué permisos* tiene.
 - Proteje rutas a traves de `guards`: solo se podrá acceder a la ruta `/users` si el usuario se encuentra auténticado.
 - Previene rutas innecesarias: también se utiliza un `guard` para que el usuario no pueda navegar a la ruta `/login` en caso de ya estar autenticado. 
 

@@ -1,10 +1,10 @@
-<nav class="h-4rem bg-primary flex justify-content-between align-items-center px-2">
+<nav class="h-4rem bg-primary flex justify-content-between align-items-center px-3">
 
   <div>
-    Logo
+    <img src="/eldar.png" style="width: 2rem;" class="cursor-pointer" >
   </div>
   <div>
-    <p-button (onClick)="op.toggle($event)" [rounded]="true" icon="pi pi-user" styleClass="bg-red-400 cursor-pointer" />
+    <p-button (onClick)="op.toggle($event)" [rounded]="true" icon="pi pi-user" severity="warning" styleClass="cursor-pointer" />
     <p-overlayPanel #op>
       <div>
         <p-button (onClick)="onLogout()" label="Log out"/>

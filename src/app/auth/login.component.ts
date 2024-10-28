@@ -42,7 +42,7 @@ export default class LoginComponent {
 
       this.router.navigateByUrl('/users');
     } else {
-      this.toastService.setToast({ severity: 'error', summary: 'Error', detail: 'Usuario o contraseña incorrectos' })
+      this.toastService.setToast({ severity: 'error', summary: 'Error', detail: 'Invalid username or passowrd' })
 
     }
   }

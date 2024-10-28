@@ -44,7 +44,7 @@ export class FormValidationService {
   checkFormValidity(form: FormGroup) {
     if (form.invalid) {
       form.markAllAsTouched();
-      this.toastService.setToast({ severity: 'error', summary: 'Error', detail: 'Verifique los datos ingresados' })
+      this.toastService.setToast({ severity: 'error', summary: 'Error', detail: 'Form is invalid' })
       throw Error;
     }
   }

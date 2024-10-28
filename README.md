@@ -7,7 +7,7 @@
 ### Características principales
 La aplicación:
 - Simula autenticación: es decir que verifica *quién* soy.
-- Maneja autorizaciones: luego de identificar al usuario, verifica qué acciones puede realizar.
+- Maneja autorizaciones: luego de identificar al usuario, verifica `qué permisos` tiene.
 - Proteje rutas a traves de `guards`: solo se podrá acceder a la ruta `/users` si el usuario se encuentra auténticado.
 - Previene rutas innecesarias: también se utiliza un `guard` para que el usuario no pueda navegar a la ruta `/login` en caso de ya estar autenticado. 
 
@@ -36,7 +36,7 @@ Acorde a la consigna recibida, se empleó `Ngrx` para la verificación del estad
 ### Librerías
 - PrimeNG para components.
 - PrimeFlex para estilizar. Idealmente eligiría Tailwind, pero tiene conflictos con PrimeNG. Este inconveniente se solucionará con la versión 18 de PrimeNG, pero todavía está en beta.
-- jwt-decode: para poder traducir los JSON Web Tokens.
+- jwt-decode: para traducir los JSON Web Tokens.
 
 
 Saludos 😃
